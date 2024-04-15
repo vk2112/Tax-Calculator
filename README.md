@@ -1,4 +1,12 @@
 -This project has to be done in HTML, CSS and Javascript.
+<img src="screenshot1.png" width="200px">
+<img src="screenshot2.png" width="200px">
+<img src="screenshot3.png" width="200px">
+<img src="screenshot4.png" width="200px">
+<img src="screenshot5.png" width="200px">
+<img src="screenshot6.png" width="200px">
+<img src="screenshot7.png" width="200px">
+<img src="screenshot8.png" width="200px">
 -  The tax calculation works based on this formula -
     - Overall income (after deductions) under 8 (≤) Lakhs is not taxed.
     - Income over 8 (>) Lakhs, the amount over 8 Lakhs is taxed at
