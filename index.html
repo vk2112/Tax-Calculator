@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Font-Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Css stylesheet-->
+  <link rel="stylesheet" href="style.css" />
+  <title>Tax-Calculator</title>
+</head>
+
+<body>
+  <!--Calculator section-->
+  <section class="calculator">
+    <div class="input-container">
+      <form id="taxForm">
+        <div class="input">
+          <label for="income">Enter gross annula income<i class="fa-regular fa-circle-question">
+              <p id="instruction" class="instruction">
+                Gross annual income is your total salary in a year before any
+                deductions
+              </p>
+            </i>
+          </label>
+          <input type="text" id="income" name="income" min="0" placeholder="Enter gross annual income" />
+          <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
+            <p id="errorMsg" class="errorMsg">Please enter numbers only</p>
+          </div>
+        </div>
+        <div class="input">
+          <label for="extraIncome">Enter extra income
+            <i class="fa-regular fa-circle-question">
+              <p id="instruction" class="instruction">
+                Extra income is your bonus and other allowances just like(HRA,
+                MA, CA)
+              </p>
+            </i>
+          </label>
+          <input type="text" id="extraIncome" name="extraIncome" min="0"
+            placeholder="Enter extra income from other sources" />
+          <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
+            <p id="errorMsg" class="errorMsg">Please enter numbers only</p>
+          </div>
+        </div>
+        <div class="input">
+          <label for="age">Enter age group
+            <i class="fa-regular fa-circle-question">
+              <p id="ageInstruction" class="instruction">
+                Select your age group according to your age
+              </p>
+            </i>
+          </label>
+          <select name="age" id="age">
+            <option value="" disabled selected></option>
+            <option value="<40">&lt;40</option>
+            <option value=">=40&<60">&ge;40 &amp; &lt;60</option>
+            <option value=">=60">&ge;60</option>
+          </select>
+          <div id="ageError"><i class="fa-solid fa-circle-exclamation">
+              <p id="errorMsg" class="errorMsg">
+                Input field is mandatory
+              </p>
+            </i>
+          </div>
+        </div>
+        <div class="input">
+          <label for="deductions">Enter total applicable deductions<i class="fa-regular fa-circle-question">
+              <p id="deductInstruction" class="instruction">
+                Applicable deductions are Tax Deducted at Source (TDS), and
+                Employees' Provident Fund (EPF)
+              </p>
+            </i>
+          </label>
+          <input type="text" id="deductions" name="deductions" min="0" placeholder="Add total applicable deductions" />
+          <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
+            <p id="errorMsg" class="errorMsg">Please enter numbers only</p>
+          </div>
+        </div>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </section>
+
+  <!--Result section-->
+  <section id="modal" class="modal">
+    <div class="result-container" id="modal">
+      <div class="result-box">
+        <h2>Your overall income will be</h2>
+        <div id="result" class="result-number"></div>
+        <p class="light">after tax deductions</p>
+        <div class="close">
+          <input type="submit" value="Close" class="close-btn" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Main JS-->
+  <script src="script.js"></script>
+</body>
+
+</html>

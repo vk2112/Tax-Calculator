@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e3fef7;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 32.5rem;
+  padding: 6rem 5rem;
+  border: 2px solid grey;
+  border-radius: 0.2rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+form label {
+  color: rgb(74, 71, 71);
+  font-weight: 500;
+}
+
+form label i {
+  position: relative;
+  color: grey;
+  cursor: pointer;
+}
+
+form label i p{
+  position: absolute;
+  top: -5.2rem;
+  font-size: .8rem;
+  font-family: "Roboto", sans-serif;
+  width: 7rem;
+  color: #e3fef7;
+  background-color: #135d66;
+  padding: .4rem;
+  border-radius: .3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#ageInstruction {
+  top: -3.5rem;
+}
+
+#deductInstruction {
+  top: -6.8rem;
+}
+
+form label i:hover .instruction{
+  visibility: visible;
+  opacity: 1;
+}
+
+.input {
+  position: relative;
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  top: 38%;
+  right: 3%;
+  color: #F2613F;
+  cursor: pointer;
+}
+
+.error-icon p {
+  position: absolute;
+  top: -2rem;
+  font-size: .8rem;
+  width: 12rem;
+  background-color: #135d66;
+  padding: .4rem;
+  border-radius: .3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-icon:hover p{
+  visibility: visible;
+  opacity: 1;
+}
+
+#ageError {
+  display: none;
+  position: absolute;
+  top: 38%;
+  right: 3%;
+  color: #F2613F;
+  cursor: pointer;
+}
+
+#ageError p {
+  position: absolute;
+  top: -2rem;
+  font-size: .8rem;
+  width: 12rem;
+  background-color: #135d66;
+  padding: .4rem;
+  border-radius: .3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #135d66;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #135d66;
+  background-color: #e3fef7;
+  box-shadow: 0 0 1rem #135d66;
+}
+
+.show {
+  display: block;
+}
+
+/*Result-section*/
+
+.modal {
+  display: none;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 0.2rem;
+  padding: 6rem;
+  position: absolute;
+  top: 22%;
+  left: 28%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgb(74, 71, 71);
+}
+
+.result-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(74, 71, 71);
+}
+
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: rgb(74, 71, 71);
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.close-btn {
+  padding: 0.5rem 0.8rem;
+  background-color: #135d66;
+  color: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #135d66;
+  background-color: #e3fef7;
+  box-shadow: 0 0 1rem #135d66;
+}
